@@ -1,0 +1,146 @@
+{
+  "navbar": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "products": "PRODUCTS",
+    "blog": "BLOG",
+    "contact": "CONTACT",
+    "search": "Search...",
+    "readMore": "Read More",
+    "posts": "POSTS"
+  },
+  "products": {
+    "filters": {
+      "title": "Filters",
+      "categories": "Categories",
+      "brands": "Brands",
+      "apply": "Apply Filters",
+      "clear": "Clear Filters",
+      "selectCategory": "Select Category",
+      "selectBrand": "Select Brand"
+    },
+    "noResults": "No products found for the selected filters",
+    "showing": "Showing",
+    "of": "of",
+    "products": "products",
+    "readTime": "Read time",
+    "minutes": "minutes",
+    "related": "Related Products",
+    "noRelated": "No related products found"
+  },
+  "contact": {
+    "letWorkTogether": "Let's work together!",
+    "subtitle": "Get in touch with us to discuss your needs and how we can help your business grow.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "callUs": "Call us",
+    "emailUs": "Email us",
+    "visitUs": "Visit us",
+    "response24h": "We will respond to your message within 24 hours",
+    "company": "Company (optional)",
+    "companyPlaceholder": "Your company name",
+    "firstNamePlaceholder": "Your first name",
+    "lastNamePlaceholder": "Your last name",
+    "emailPlaceholder": "your@email.com",
+    "phonePlaceholder": "+212 6XX XXX XXX",
+    "messagePlaceholder": "Describe your need...",
+    "successTitle": "Message sent!",
+    "successMessage": "Thank you for your message. We will reply within 24 hours.",
+    "sending": "Sending...",
+    "followUs": "Follow us"
+  },
+  "search": {
+    "resultsFor": "Search results for",
+    "noResults": "No results found for \"{query}\"",
+    "allProducts": "All Products"
+  },
+  "brands": {
+    "label": "They trust us",
+    "title": "Our Partners"
+  },
+  "news": {
+    "label": "Blog & News",
+    "title": "Latest",
+    "titleSecondLine": "Articles",
+    "viewAll": "View all articles",
+    "readMore": "Read more",
+    "noArticles": "No articles available at the moment.",
+    "minRead": "min read"
+  },
+  "blog": {
+    "readMore": "Read More",
+    "category": "Category",
+    "date": "Date",
+    "recentPosts": "Recent Posts",
+    "popularPosts": "Popular Posts",
+    "categories": "Categories",
+    "searchPlaceholder": "Search blog posts..."
+  },
+  "about": {
+    "title": "About Us",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values",
+    "team": "Our Team",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Enter your email",
+    "rights": "All rights reserved"
+  },
+  "posts": {
+    "title": "Posts",
+    "subtitle": "Amadal news and updates"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "next": "Next",
+    "previous": "Previous",
+    "viewAll": "View All",
+    "close": "Close"
+  },
+  "hero": {
+    "title": "CULTIVATING TOMORROW:",
+    "subtitle": "DISCOVER OUR SOLUTIONS!",
+    "description": "At Amadal, we empower farmers with cutting-edge technology and sustainable practices.",
+    "contactUs": "Contact Us",
+    "whatsapp": "Whatsapp"
+  },
+  "bestProducts": {
+    "featured": "Featured",
+    "title": "Our Featured",
+    "titleSecondLine": "Products",
+    "subtitle": "Discover our exclusive selection of products, chosen for their quality and field performance.",
+    "fullCatalogue": "Full Catalogue",
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "discover": "Discover",
+    "noFeatured": "No featured products at the moment."
+  },
+  "videoPlayer": {
+    "previous": "Previous video",
+    "next": "Next video",
+    "videos": {
+      "video1": {
+        "title": "How Drip Irrigation Pipes Are Manufactured"
+      },
+      "video2": {
+        "title": "Understanding PVC Pipes"
+      },
+      "video3": {
+        "title": "Installation of Irrigation Systems"
+      }
+    }
+  }
+} 
