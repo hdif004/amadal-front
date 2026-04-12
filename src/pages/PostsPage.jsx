@@ -4,6 +4,8 @@ import Footer from "../sections/Footer";
 import PostCard from "../components/PostCard";
 import { fetchPosts } from "../api/api";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
+import { SITE_URL } from '../config';
 
 const POSTS_PER_PAGE = 9;
 
@@ -32,6 +34,16 @@ const PostsPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Publications | Amadal Global Systems</title>
+        <meta name="description" content="Retrouvez les dernières publications et actualités d'Amadal Global Systems sur les réseaux sociaux." />
+        <meta property="og:title" content="Publications | Amadal Global Systems" />
+        <meta property="og:description" content="Retrouvez les dernières publications et actualités d'Amadal Global Systems sur les réseaux sociaux." />
+        <meta property="og:url" content={`${SITE_URL}/posts`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <link rel="canonical" href={`${SITE_URL}/posts`} />
+      </Helmet>
       <Navbar />
       <div className="pt-[60px] min-h-screen bg-gray-50">
         {/* Header */}

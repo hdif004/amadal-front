@@ -3,6 +3,8 @@ import Navbar from "../sections/Navbar";
 import BlogCard from "../components/BlogCard";
 import Footer from "../sections/Footer";
 import { fetchBlogPosts } from "../api/api";
+import { Helmet } from "react-helmet-async";
+import { SITE_URL } from '../config';
 
 const formatTitleForUrl = (title) => {
   return title
@@ -89,6 +91,16 @@ const BlogHub = () => {
 
   return (
     <div onClick={(e) => console.log('BlogHub container clicked', e)}>
+      <Helmet>
+        <title>Blog | Amadal Global Systems</title>
+        <meta name="description" content="Actualités, conseils et articles sur l'irrigation, l'agriculture et les équipements hydrauliques au Maroc." />
+        <meta property="og:title" content="Blog | Amadal Global Systems" />
+        <meta property="og:description" content="Actualités, conseils et articles sur l'irrigation, l'agriculture et les équipements hydrauliques au Maroc." />
+        <meta property="og:url" content={`${SITE_URL}/blog`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <link rel="canonical" href={`${SITE_URL}/blog`} />
+      </Helmet>
       <Navbar />
       <div className="pt-[60px]" onClick={(e) => console.log('Content container clicked', e)}>
         {/* Featured Post Carousel */}

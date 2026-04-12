@@ -11,6 +11,7 @@ import Footer from '../sections/Footer';
 import '../index.css';
 import NavFilters from '../sections/NavFilters';
 import { Helmet } from 'react-helmet-async';
+import { SITE_URL } from '../config';
 
 const Home = () => {
   const section1Ref = useRef(null);
@@ -65,10 +66,10 @@ const Home = () => {
         <meta name="description" content="Amadal Global Systems, spécialiste en solutions d'irrigation, équipements agricoles et systèmes hydrauliques au Maroc." />
         <meta property="og:title" content="Amadal Global Systems | Solutions d'irrigation" />
         <meta property="og:description" content="Amadal Global Systems, spécialiste en solutions d'irrigation, équipements agricoles et systèmes hydrauliques au Maroc." />
-        <meta property="og:url" content="https://amadal.ma" />
+        <meta property="og:url" content={SITE_URL} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://amadal.ma/AmadalGreen.png" />
-        <link rel="canonical" href="https://amadal.ma" />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <link rel="canonical" href={SITE_URL} />
       </Helmet>
       <Navbar />
 

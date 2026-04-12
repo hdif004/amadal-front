@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
 import { Helmet } from "react-helmet-async";
+import { SITE_URL } from '../config';
 
 const PrivacyPolicy = () => {
   const [content, setContent] = useState("");
@@ -29,7 +30,8 @@ const PrivacyPolicy = () => {
       <Helmet>
         <title>Politique de confidentialité | Amadal Global Systems</title>
         <meta name="description" content="Politique de confidentialité d'Amadal Global Systems." />
-        <link rel="canonical" href="https://amadal.ma/privacy-policy" />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href={`${SITE_URL}/privacy-policy`} />
       </Helmet>
 
       <Navbar />

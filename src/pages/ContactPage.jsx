@@ -3,6 +3,7 @@ import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { SITE_URL } from '../config';
 import GoogleMap from "../components/GoogleMap";
 
 const ContactPage = () => {
@@ -15,7 +16,12 @@ const ContactPage = () => {
       <Helmet>
         <title>Contact | Amadal Global Systems</title>
         <meta name="description" content="Contactez Amadal Global Systems pour toute demande concernant nos produits d'irrigation et équipements agricoles." />
-        <link rel="canonical" href="https://amadal.ma/contact" />
+        <meta property="og:title" content="Contact | Amadal Global Systems" />
+        <meta property="og:description" content="Contactez Amadal Global Systems pour toute demande concernant nos produits d'irrigation et équipements agricoles." />
+        <meta property="og:url" content={`${SITE_URL}/contact`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <link rel="canonical" href={`${SITE_URL}/contact`} />
       </Helmet>
 
       <Navbar />

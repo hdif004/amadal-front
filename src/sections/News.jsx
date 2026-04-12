@@ -66,6 +66,7 @@ const FeaturedArticle = ({ post }) => {
             src={post.image_url}
             alt={post.title}
             loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
           />
         ) : (
@@ -144,6 +145,7 @@ const CompactArticle = ({ post, isLast }) => {
             src={post.image_url}
             alt={post.title}
             loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (

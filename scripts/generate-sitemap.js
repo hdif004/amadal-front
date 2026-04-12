@@ -6,7 +6,19 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const WP_BASE = 'https://amadal.ma/wp-json/wp/v2';
+// Lire VITE_WP_URL depuis .env.production
+const envFile = path.join(__dirname, '../.env.production');
+const envVars = fs.existsSync(envFile)
+  ? Object.fromEntries(
+      fs.readFileSync(envFile, 'utf-8')
+        .split('\n')
+        .filter(l => l.includes('='))
+        .map(l => l.split('=').map(s => s.trim()))
+    )
+  : {};
+const WP_URL   = envVars.VITE_WP_URL   || '';
+const SITE_URL = envVars.VITE_SITE_URL || 'https://amadal.ma';
+const WP_BASE  = `${WP_URL}/wp-json/wp/v2`;
 
 const slugify = (text) => {
   return text
@@ -51,7 +63,7 @@ async function generateSitemap() {
 
     staticPages.forEach(page => {
       xml += `  <url>\n`;
-      xml += `    <loc>https://amadal.ma/${page.url}</loc>\n`;
+      xml += `    <loc>${SITE_URL}/${page.url}</loc>\n`;
       xml += `    <priority>${page.priority}</priority>\n`;
       xml += `  </url>\n`;
     });
@@ -60,7 +72,7 @@ async function generateSitemap() {
     products.forEach(product => {
       const slug = product.slug || slugify(product.title?.rendered || String(product.id));
       xml += `  <url>\n`;
-      xml += `    <loc>https://amadal.ma/products/${slug}/${product.id}</loc>\n`;
+      xml += `    <loc>${SITE_URL}/products/${slug}/${product.id}</loc>\n`;
       xml += `    <priority>0.8</priority>\n`;
       xml += `  </url>\n`;
     });
@@ -69,7 +81,7 @@ async function generateSitemap() {
     posts.forEach(post => {
       const slug = post.slug || slugify(post.title?.rendered || String(post.id));
       xml += `  <url>\n`;
-      xml += `    <loc>https://amadal.ma/blog/${slug}/${post.id}</loc>\n`;
+      xml += `    <loc>${SITE_URL}/blog/${slug}/${post.id}</loc>\n`;
       xml += `    <priority>0.7</priority>\n`;
       xml += `  </url>\n`;
     });
@@ -84,8 +96,7 @@ async function generateSitemap() {
 
     console.log(`Sitemap généré : ${staticPages.length} pages statiques, ${products.length} produits, ${posts.length} articles.`);
   } catch (error) {
-    console.error('Erreur génération sitemap:', error);
-    process.exit(1);
+    console.warn('⚠️  Sitemap non généré (API inaccessible) — le build continue.');
   }
 }
 

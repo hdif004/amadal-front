@@ -8,6 +8,7 @@ import ProductsCarousel from "../components/ProductsCarousel";
 import Footer from "../sections/Footer";
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Helmet } from 'react-helmet-async';
+import { SITE_URL } from '../config';
 import { slugify } from '../utils/urlHelpers';
 
 
@@ -73,7 +74,7 @@ const ProductDetail = () => {
       "name": getBrandName(product.idbrand)
     },
     "category": getCategoryName(product.idcategory),
-    "url": `https://amadal.ma/products/${productSlug}/${product.id}`
+    "url": `${SITE_URL}/products/${productSlug}/${product.id}`
   };
 
   return (
@@ -88,17 +89,17 @@ const ProductDetail = () => {
         <meta property="og:title" content={`${product.name} | Amadal Global Systems`} />
         <meta property="og:description" content={product.description?.replace(/<[^>]*>/g, '').substring(0, 155) + '...'} />
         <meta property="og:image" content={product.imageURL} />
-        <meta property="og:url" content={`https://amadal.ma/products/${productSlug}/${product.id}`} />
+        <meta property="og:url" content={`${SITE_URL}/products/${productSlug}/${product.id}`} />
         <meta property="og:type" content="product" />
-        
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${product.name} | Amadal Global Systems`} />
         <meta name="twitter:description" content={product.description?.replace(/<[^>]*>/g, '').substring(0, 155) + '...'} />
         <meta name="twitter:image" content={product.imageURL} />
 
-        <link rel="canonical" href={`https://amadal.ma/products/${productSlug}/${product.id}`} />
-        <link rel="alternate" hrefLang="fr" href={`https://amadal.ma/fr/products/${product.slug}/${product.id}`} />
-        <link rel="alternate" hrefLang="en" href={`https://amadal.ma/products/${product.slug}/${product.id}`} />
+        <link rel="canonical" href={`${SITE_URL}/products/${productSlug}/${product.id}`} />
+        <link rel="alternate" hrefLang="fr" href={`${SITE_URL}/fr/products/${product.slug}/${product.id}`} />
+        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/products/${product.slug}/${product.id}`} />
         <script type="application/ld+json">
           {JSON.stringify(productSchema)}
         </script>
@@ -189,7 +190,7 @@ const ProductDetail = () => {
                     }`}
                     style={{ aspectRatio: '1 / 1' }}
                   >
-                    <img src={product.imageURL} alt="" className="w-full h-full object-cover" />
+                    <img src={product.imageURL} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   </button>
                   {/* Galerie */}
                   {product.gallery.map((img, i) => (
@@ -201,7 +202,7 @@ const ProductDetail = () => {
                       }`}
                       style={{ aspectRatio: '1 / 1' }}
                     >
-                      <img src={img} alt="" className="w-full h-full object-cover" />
+                      <img src={img} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                     </button>
                   ))}
                 </div>

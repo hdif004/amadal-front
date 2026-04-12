@@ -6,6 +6,7 @@ import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
 import { slugify } from '../utils/urlHelpers';
 import { Helmet } from 'react-helmet-async';
+import { SITE_URL } from '../config';
 
 const BlogPostPage = () => {
   const { blogid } = useParams();
@@ -126,16 +127,16 @@ const BlogPostPage = () => {
         <meta property="og:title" content={`${post.title} | Amadal Global Systems Blog`} />
         <meta property="og:description" content={post.description?.substring(0, 155) + '...'} />
         <meta property="og:image" content={post.image_url} />
-        <meta property="og:url" content={`https://amadal.ma/blog/${blogSlug}/${post.id}`} />
+        <meta property="og:url" content={`${SITE_URL}/blog/${blogSlug}/${post.id}`} />
         <meta property="og:type" content="article" />
-        
+
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${post.title} | Amadal Global Systems Blog`} />
         <meta name="twitter:description" content={post.description?.substring(0, 155) + '...'} />
         <meta name="twitter:image" content={post.image_url} />
 
-        <link rel="canonical" href={`https://amadal.ma/blog/${blogSlug}/${post.id}`} />
+        <link rel="canonical" href={`${SITE_URL}/blog/${blogSlug}/${post.id}`} />
       </Helmet>
       <div className="min-h-screen flex flex-col">
         <style>{blogContentStyles}</style>

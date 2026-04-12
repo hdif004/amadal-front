@@ -31,6 +31,8 @@ const BlogCard = ({ blog }) => {
           <img
             src={blog.image_url || "/placeholder-image.jpg"}
             alt={blog.title}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
           />
         </div>

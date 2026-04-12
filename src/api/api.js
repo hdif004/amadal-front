@@ -1,4 +1,5 @@
-const WP_BASE = "/wp-json/wp/v2";
+const WP_ORIGIN = import.meta.env.VITE_WP_URL || "";
+const WP_BASE = `${WP_ORIGIN}/wp-json/wp/v2`;
 
 const decodeHtml = (str) => {
   if (!str) return str;

@@ -61,7 +61,7 @@ const PostModal = ({ post, onClose }) => {
                 <div className="flex h-full">
                   {images.map((img, i) => (
                     <div key={i} className="flex-[0_0_100%] min-w-0 h-full">
-                      <img src={img} alt={`${post.title} ${i + 1}`} className="w-full h-full object-cover" />
+                      <img src={img} alt={`${post.title} ${i + 1}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                     </div>
                   ))}
                 </div>
