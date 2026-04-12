@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
 import Lottie from "lottie-react";
+import { asset } from "../config";
 import animationData from "../lotties/check-mark-primary.json";
 
 const ContactPage = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-14 w-full h-[550px] bg-primary lg:bg-Contact-Image bg-cover flex">
+      <div className="mt-14 w-full h-[550px] bg-cover flex"
+        style={{ backgroundImage: `url(${asset("ContactHeader.png")})` }}>
         <div className="ml-auto flex flex-col px-4 sm:px-20 lg:px-40 justify-center items-start text-left">
           <h1 className="text-white text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold py-4">
             Thank you for reaching out!

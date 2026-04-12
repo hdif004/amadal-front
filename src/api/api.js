@@ -21,6 +21,7 @@ const mapProduct = (wpProduct) => {
       || "",
     description: decodeHtml(acf.description_courte || wpProduct.excerpt?.rendered || ""),
     specs: acf.mesures || null,
+    labelMesure: acf.label_mesure || null,
     note: acf.note || null,
     pdfUrl: acf.fiche_produit || null,
     featured: acf.featured === true || acf.featured === 1 || acf.featured === "1" || acf.featured === "true",

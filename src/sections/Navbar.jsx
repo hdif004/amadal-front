@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useTranslation } from "react-i18next";
 import { searchProducts } from "../api/api";
+import { asset } from "../config";
 
 /* ── Lien de navigation avec état actif ─────────────────────────── */
 const NavLink = ({ path, label, onClick }) => {
@@ -157,7 +158,7 @@ const Navbar = () => {
 
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src="/AmadalGreen.png" alt="Amadal Global Systems" className="h-8 lg:h-9 w-auto" />
+              <img src={asset("AmadalGreen.png")} alt="Amadal Global Systems" className="h-8 lg:h-9 w-auto" />
             </Link>
 
             {/* Liens desktop */}
@@ -247,7 +248,7 @@ const Navbar = () => {
         {/* En-tête drawer */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <Link to="/" onClick={() => setMobileOpen(false)}>
-            <img src="/AmadalGreen.png" alt="Amadal Global Systems" className="h-7 w-auto" />
+            <img src={asset("AmadalGreen.png")} alt="Amadal Global Systems" className="h-7 w-auto" />
           </Link>
           <button
             onClick={() => setMobileOpen(false)}

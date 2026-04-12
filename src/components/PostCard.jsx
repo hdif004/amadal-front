@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import PostModal from "./PostModal";
+import { asset } from "../config";
 
 const formatDate = (dateStr) => {
   if (!dateStr) return "";
@@ -133,7 +134,7 @@ const PostCard = ({ post }) => {
           <div className="flex items-center justify-between mb-1.5">
             <div className="flex items-center gap-1.5">
               <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <img src="/AmadalGreen.png" alt="Amadal" className="w-4 h-4 object-contain" />
+                <img src={asset("AmadalGreen.png")} alt="Amadal" className="w-4 h-4 object-contain" />
               </div>
               <span className="text-xs font-semibold text-gray-700">Amadal</span>
             </div>

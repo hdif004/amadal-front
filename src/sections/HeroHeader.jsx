@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { asset } from '../config';
 
 const HeroHeader = () => {
   const { t } = useTranslation();
 
   return (
     <div
-      className="relative mt-16 w-full bg-Hero-Header bg-cover bg-center rounded-b-3xl overflow-hidden
+      className="relative mt-16 w-full bg-cover bg-center rounded-b-3xl overflow-hidden
                  min-h-[40vh] lg:min-h-[520px] lg:max-h-[650px]"
+      style={{ backgroundImage: `url(${asset("HeroHeader.png")})` }}
     >
       {/* Overlay gradient : sombre à gauche, s'éclaircit à droite */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10" />

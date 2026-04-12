@@ -1,5 +1,6 @@
 import React from "react";
 import YouTube from "react-youtube";
+import { asset } from "../config";
 
 const VideoCard = ({ videoUrl, title, isPlaying, handlePlay }) => {
   return (
@@ -16,7 +17,7 @@ const VideoCard = ({ videoUrl, title, isPlaying, handlePlay }) => {
         />
       ) : (
         <>
-          <img className="w-full h-full object-cover" src="VideoImage.png" alt="" />
+          <img className="w-full h-full object-cover" src={asset("VideoImage.png")} alt="" />
           <div className="w-full absolute inset-0 flex justify-center h-full px-8 sm:px-16 md:px-40 items-center z-10">
             <div className="flex flex-col items-center gap-10">
               <div className="flex flex-col items-center gap-3">

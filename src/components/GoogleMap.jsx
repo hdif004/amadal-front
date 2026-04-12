@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { asset } from "../config";
 
 // Fix icône par défaut Leaflet (webpack/vite ne résout pas les assets automatiquement)
 delete L.Icon.Default.prototype._getIconUrl;
@@ -48,7 +49,7 @@ const LeafletMap = () => {
       <Marker position={[LAT, LNG]} icon={customIcon}>
         <Popup>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px", minWidth: "140px" }}>
-            <img src="/AmadalGreen.png" alt="Amadal" style={{ height: "28px", width: "auto", objectFit: "contain" }} />
+            <img src={asset("AmadalGreen.png")} alt="Amadal" style={{ height: "28px", width: "auto", objectFit: "contain" }} />
             <div style={{ fontSize: "11px", color: "#6b7280", textAlign: "center", lineHeight: "1.5" }}>
               121, rue Radi Slaoui, Belvédère<br />Casablanca
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { asset } from "../config";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ const Footer = () => {
           {/* ── Colonne 1 : Logo + tagline + réseaux ── */}
           <div className="flex flex-col gap-6 sm:col-span-2 lg:col-span-1">
             <Link to="/">
-              <img src="/AmadalWhite.svg" alt="Amadal Global Systems" className="h-10 w-auto" />
+              <img src={asset("AmadalWhite.svg")} alt="Amadal Global Systems" className="h-10 w-auto" />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed max-w-[260px]">
               Spécialiste en solutions d'irrigation, équipements agricoles et systèmes hydrauliques au Maroc.

@@ -245,7 +245,7 @@ const ProductDetail = () => {
             {/* Mesures disponibles */}
             {product.specs && product.specs.length > 0 && (
               <div>
-                <p className="text-lg font-semibold text-gray-800 mb-3">Mesures disponibles</p>
+                <p className="text-lg font-semibold text-gray-800 mb-3">{product.labelMesure || "Mesures disponibles"}</p>
                 <div className="flex flex-wrap gap-2">
                   {product.specs.map((spec, i) => (
                     <span key={i} className="border border-primary text-primary text-base font-medium px-5 py-2.5 rounded-full">

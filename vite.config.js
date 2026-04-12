@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    base: mode === 'production' ? '/Amadal/' : '/',
+    base: mode === 'production' ? '/amadal-front/' : '/',
     server: {
       proxy: {
         '/wp-json': {
