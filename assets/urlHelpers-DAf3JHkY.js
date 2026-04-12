@@ -1,0 +1,1 @@
+const s=e=>e.toString().toLowerCase().trim().replace(/[^\w\s-]/g,"").replace(/\s+/g,"-").replace(/-+/g,"-").replace(/^-+/,"").replace(/-+$/,""),n=e=>{const r=e.name_en||e.name;return`/products/${s(r)}/${e.id}`};export{n as g,s};
