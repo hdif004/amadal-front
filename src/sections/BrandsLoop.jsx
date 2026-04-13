@@ -1,14 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Rain from "../assets/logocarousel/Rain.png";
-import RainBird from "../assets/logocarousel/RainBird.png";
-import Hunter from "../assets/logocarousel/Hunter.png";
-import Cepex from "../assets/logocarousel/Cepex.png";
-import Azud from "../assets/logocarousel/Azud.png";
-import Astore from "../assets/logocarousel/Astore.png";
-import Effast from "../assets/logocarousel/Effast.png";
-import Hidroten from "../assets/logocarousel/Hidroten.png";
-import Plastica from "../assets/logocarousel/Plastica.png";
+import Rain from "../assets/logocarousel/Rain.webp";
+import RainBird from "../assets/logocarousel/RainBird.webp";
+import Hunter from "../assets/logocarousel/Hunter.webp";
+import Cepex from "../assets/logocarousel/Cepex.webp";
+import Azud from "../assets/logocarousel/Azud.webp";
+import Astore from "../assets/logocarousel/Astore.webp";
+import Effast from "../assets/logocarousel/Effast.webp";
+import Hidroten from "../assets/logocarousel/Hidroten.webp";
+import Plastica from "../assets/logocarousel/Plastica.webp";
 
 const logos = [
   { src: Azud, alt: "Azud" },

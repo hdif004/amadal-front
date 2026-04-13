@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useLanguage } from '../contexts/LanguageContext';
 import { fetchCategories, fetchBrands, fetchProductById } from "../api/api";
@@ -20,6 +20,8 @@ const ProductDetail = () => {
   const [categories, setCategories] = useState([]);
   const [activeImage, setActiveImage] = useState(null);
   const [noteOpen, setNoteOpen] = useState(false);
+  const [stickyVisible, setStickyVisible] = useState(true);
+  const footerRef = useRef(null);
 
   useEffect(() => {
     const fetchProductData = async () => {
@@ -47,13 +49,28 @@ const ProductDetail = () => {
     fetchProductData();
   }, [productid, language]);
 
+  useEffect(() => {
+    if (!footerRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setStickyVisible(!entry.isIntersecting),
+      { threshold: 0.01 }
+    );
+    observer.observe(footerRef.current);
+    return () => observer.disconnect();
+  }, [product]);
+
   if (!product) {
     return <LoadingSpinner fullPage />;
   }
 
+  const mainCategoryId = product.categories?.length
+    ? product.categories[product.categories.length - 1]
+    : null;
+
   const getCategoryName = (id) => {
+    if (!id) return null;
     const category = categories.find((cat) => cat.idcategory === id);
-    return category ? category.name : "N/A";
+    return category ? category.name : null;
   };
 
   const getBrandName = (id) => {
@@ -73,7 +90,7 @@ const ProductDetail = () => {
       "@type": "Brand",
       "name": getBrandName(product.idbrand)
     },
-    "category": getCategoryName(product.idcategory),
+    "category": getCategoryName(mainCategoryId) || "",
     "url": `${SITE_URL}/products/${productSlug}/${product.id}`
   };
 
@@ -107,13 +124,13 @@ const ProductDetail = () => {
       <Navbar />
       <div>
         <Breadcrumb
-          category={getCategoryName(product.idcategory)}
-          categoryId={product.idcategory}
+          category={getCategoryName(mainCategoryId)}
+          categoryId={mainCategoryId}
           productName={product.name}
         />
       </div>
       {/* CTA sticky mobile */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white border-t border-gray-100 px-5 py-4 flex flex-col gap-3">
+      <div className={`fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white border-t border-gray-100 px-5 py-4 flex flex-col gap-3 transition-transform duration-300 ${stickyVisible ? "translate-y-0" : "translate-y-full"}`}>
         <a
           href="/contact"
           className="w-full flex items-center justify-center gap-2 bg-primary text-white rounded-xl py-4 text-base font-semibold"
@@ -148,7 +165,7 @@ const ProductDetail = () => {
             {/* Titre / Catégorie / Marque — visible uniquement sur mobile, au-dessus de l'image */}
             <div className="lg:hidden flex flex-col gap-2 px-4 pt-4 pb-2">
               <p className="text-base font-semibold uppercase tracking-widest text-primary/60">
-                {getCategoryName(product.idcategory)}
+                {getCategoryName(mainCategoryId)}
               </p>
               <h1 className="text-5xl font-bold text-gray-900 leading-tight">
                 {product.name}
@@ -216,7 +233,7 @@ const ProductDetail = () => {
             {/* Catégorie + Titre + Marque — desktop uniquement */}
             <div className="hidden lg:flex flex-col gap-3">
               <p className="text-sm font-semibold uppercase tracking-widest text-primary/60">
-                {getCategoryName(product.idcategory)}
+                {getCategoryName(mainCategoryId)}
               </p>
               <h1 className="text-3xl lg:text-3xl font-bold text-gray-900 leading-snug">
                 {product.name}
@@ -317,7 +334,7 @@ const ProductDetail = () => {
           <ProductsCarousel currentProductId={product.id} />
         </div>
       </main>
-      <Footer />
+      <div ref={footerRef}><Footer /></div>
     </>
   );
 };

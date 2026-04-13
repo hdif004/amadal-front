@@ -158,7 +158,7 @@ const Navbar = () => {
 
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src={asset("AmadalGreen.png")} alt="Amadal Global Systems" className="h-8 lg:h-9 w-auto" />
+              <img src={asset("AmadalGreen.webp")} alt="Amadal Global Systems" className="h-8 lg:h-9 w-auto" />
             </Link>
 
             {/* Liens desktop */}
@@ -248,7 +248,7 @@ const Navbar = () => {
         {/* En-tête drawer */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <Link to="/" onClick={() => setMobileOpen(false)}>
-            <img src={asset("AmadalGreen.png")} alt="Amadal Global Systems" className="h-7 w-auto" />
+            <img src={asset("AmadalGreen.webp")} alt="Amadal Global Systems" className="h-7 w-auto" />
           </Link>
           <button
             onClick={() => setMobileOpen(false)}

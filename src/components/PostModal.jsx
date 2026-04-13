@@ -117,7 +117,7 @@ const PostModal = ({ post, onClose }) => {
           <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-100 flex-shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <img src={asset("AmadalGreen.png")} alt="Amadal" className="w-6 h-6 object-contain" />
+                <img src={asset("AmadalGreen.webp")} alt="Amadal" className="w-6 h-6 object-contain" />
               </div>
               <div>
                 <p className="text-sm font-semibold text-gray-900 leading-tight">Amadal</p>

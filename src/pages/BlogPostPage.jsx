@@ -187,13 +187,15 @@ const BlogPostPage = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="mb-16">
-            <img
-              src={post.image_url}
-              alt={post.title}
-              className="w-full h-48 sm:h-64 md:h-96 lg:h-[500px] object-cover rounded-lg"
-            />
-          </div>
+          {post.image_url && (
+            <div className="mb-16">
+              <img
+                src={post.image_url}
+                alt={post.title}
+                className="w-full max-h-[500px] object-contain rounded-lg bg-gray-50"
+              />
+            </div>
+          )}
 
           {/* Main Content and Sidebar Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 relative">

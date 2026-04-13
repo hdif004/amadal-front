@@ -20,7 +20,7 @@ const ContactPage = () => {
         <meta property="og:description" content="Contactez Amadal Global Systems pour toute demande concernant nos produits d'irrigation et équipements agricoles." />
         <meta property="og:url" content={`${SITE_URL}/contact`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.webp`} />
         <link rel="canonical" href={`${SITE_URL}/contact`} />
       </Helmet>
 

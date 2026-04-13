@@ -49,7 +49,7 @@ const LeafletMap = () => {
       <Marker position={[LAT, LNG]} icon={customIcon}>
         <Popup>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px", minWidth: "140px" }}>
-            <img src={asset("AmadalGreen.png")} alt="Amadal" style={{ height: "28px", width: "auto", objectFit: "contain" }} />
+            <img src={asset("AmadalGreen.webp")} alt="Amadal" style={{ height: "28px", width: "auto", objectFit: "contain" }} />
             <div style={{ fontSize: "11px", color: "#6b7280", textAlign: "center", lineHeight: "1.5" }}>
               121, rue Radi Slaoui, Belvédère<br />Casablanca
             </div>

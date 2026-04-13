@@ -17,7 +17,7 @@ const About = () => {
         <meta property="og:description" content="Découvrez Amadal Global Systems, notre histoire, nos valeurs et notre expertise dans les solutions d'irrigation et équipements agricoles au Maroc." />
         <meta property="og:url" content={`${SITE_URL}/about`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.webp`} />
         <link rel="canonical" href={`${SITE_URL}/about`} />
       </Helmet>
 

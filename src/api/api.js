@@ -15,8 +15,9 @@ const mapProduct = (wpProduct) => {
     id: wpProduct.id,
     slug: wpProduct.slug,
     name: decodeHtml(wpProduct.title?.rendered || ""),
-    imageURL: acf.image_principale?.url
+    imageURL: acf.image_principale?.sizes?.medium_large
       || acf.image_principale?.sizes?.large
+      || acf.image_principale?.url
       || wpProduct._embedded?.["wp:featuredmedia"]?.[0]?.source_url
       || "",
     description: decodeHtml(acf.description_courte || wpProduct.excerpt?.rendered || ""),
@@ -25,10 +26,10 @@ const mapProduct = (wpProduct) => {
     note: acf.note || null,
     pdfUrl: acf.fiche_produit || null,
     featured: acf.featured === true || acf.featured === 1 || acf.featured === "1" || acf.featured === "true",
-    idcategory: wpProduct.tags?.[0] || null,
+    categories: wpProduct.categorie || [],
     brandName: typeof acf.brand === "string" && isNaN(acf.brand) ? acf.brand : null,
     gallery: Array.isArray(acf.gallerie)
-      ? acf.gallerie.map((img) => img?.url || img?.sizes?.large || "").filter(Boolean)
+      ? acf.gallerie.map((img) => img?.sizes?.medium_large || img?.sizes?.large || img?.url || "").filter(Boolean)
       : [],
   };
 };
@@ -48,10 +49,14 @@ export const fetchProductById = async (id, language = "fr") => {
 };
 
 export const fetchCategories = async () => {
-  const res = await fetch(`${WP_BASE}/tags?per_page=100&_fields=id,name,slug`);
+  const res = await fetch(`${WP_BASE}/categorie?per_page=100&_fields=id,name,slug,parent`);
   if (!res.ok) throw new Error("Erreur fetchCategories");
   const data = await res.json();
-  return data.map((tag) => ({ idcategory: tag.id, name: decodeHtml(tag.name) }));
+  return data.map((cat) => ({
+    idcategory: cat.id,
+    name: decodeHtml(cat.name),
+    parent: cat.parent || 0,
+  }));
 };
 
 export const fetchBrands = async () => {

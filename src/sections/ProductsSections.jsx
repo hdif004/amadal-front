@@ -66,14 +66,23 @@ const ProductsSections = () => {
   }, [language, searchQuery]);
 
   const applyFilters = useCallback(() => {
-    const { categories, brands } = filters;
+    const { categories: selectedCats, brands } = filters;
     let filteredProducts = allProducts;
 
-    if (categories.length > 0) {
+    if (selectedCats.length > 0) {
+      // Récupère tous les IDs enfants d'une catégorie sélectionnée
+      const getDescendants = (parentId) => {
+        const children = categories.filter(c => c.parent === parentId).map(c => c.idcategory);
+        return children.reduce((acc, id) => [...acc, id, ...getDescendants(id)], []);
+      };
+      const expandedCats = [
+        ...selectedCats,
+        ...selectedCats.flatMap(id => getDescendants(id)),
+      ];
+
       filteredProducts = filteredProducts.filter((product) => {
         if (!product) return false;
-        if (categories.includes("none") && !product.idcategory) return true;
-        return categories.includes(product.idcategory);
+        return product.categories?.some(id => expandedCats.includes(id));
       });
     }
 
@@ -104,9 +113,9 @@ const ProductsSections = () => {
     }
   };
 
-  const handleFilterChange = (newFilters) => {
+  const handleFilterChange = useCallback((newFilters) => {
     setFilters(newFilters);
-  };
+  }, []);
 
   // Pagination logic
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -170,7 +179,11 @@ const ProductsSections = () => {
                       key={product.id}
                       product={{
                         ...product,
-                        categoryName: categories.find(cat => cat.idcategory === product.idcategory)?.name || "N/A",
+                        categoryName: product.categories?.length
+  ? (categories.find(cat => cat.idcategory === product.categories[product.categories.length - 1])?.name
+    || categories.find(cat => cat.idcategory === product.categories[0])?.name
+    || "N/A")
+  : "N/A",
                       }}
                     />
                   ))}
@@ -197,7 +210,11 @@ const ProductsSections = () => {
                   key={product.id}
                   product={{
                     ...product,
-                    categoryName: categories.find(cat => cat.idcategory === product.idcategory)?.name || "N/A",
+                    categoryName: product.categories?.length
+  ? (categories.find(cat => cat.idcategory === product.categories[product.categories.length - 1])?.name
+    || categories.find(cat => cat.idcategory === product.categories[0])?.name
+    || "N/A")
+  : "N/A",
                   }}
                 />
               ))}

@@ -68,7 +68,7 @@ const Home = () => {
         <meta property="og:description" content="Amadal Global Systems, spécialiste en solutions d'irrigation, équipements agricoles et systèmes hydrauliques au Maroc." />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.webp`} />
         <link rel="canonical" href={SITE_URL} />
       </Helmet>
       <Navbar />

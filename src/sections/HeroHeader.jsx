@@ -9,7 +9,7 @@ const HeroHeader = () => {
     <div
       className="relative mt-16 w-full bg-cover bg-center rounded-b-3xl overflow-hidden
                  min-h-[40vh] lg:min-h-[520px] lg:max-h-[650px]"
-      style={{ backgroundImage: `url(${asset("HeroHeader.png")})` }}
+      style={{ backgroundImage: `url(${asset("HeroHeader.webp")})` }}
     >
       {/* Overlay gradient : sombre à gauche, s'éclaircit à droite */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10" />
@@ -24,11 +24,11 @@ const HeroHeader = () => {
           {/* Titre */}
           <div className="flex flex-col gap-1">
             <h1 className="text-white font-extrabold text-[1.6rem] xs:text-[1.85rem] sm:text-5xl lg:text-5xl xl:text-[3.4rem]
-                           leading-[1.08] tracking-tight whitespace-nowrap">
+                           leading-[1.08] tracking-tight sm:whitespace-nowrap">
               {t('hero.title')}
             </h1>
             <span className="text-primary font-extrabold text-[1.6rem] xs:text-[1.85rem] sm:text-5xl lg:text-5xl xl:text-[3.4rem]
-                             leading-[1.08] tracking-tight whitespace-nowrap">
+                             leading-[1.08] tracking-tight sm:whitespace-nowrap">
               {t('hero.subtitle')}
             </span>
           </div>

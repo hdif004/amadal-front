@@ -98,7 +98,7 @@ const BlogHub = () => {
         <meta property="og:description" content="Actualités, conseils et articles sur l'irrigation, l'agriculture et les équipements hydrauliques au Maroc." />
         <meta property="og:url" content={`${SITE_URL}/blog`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.webp`} />
         <link rel="canonical" href={`${SITE_URL}/blog`} />
       </Helmet>
       <Navbar />
@@ -107,7 +107,7 @@ const BlogHub = () => {
         {featuredPosts.length > 0 && (
           <div className="relative w-full h-[70vh] rounded-b-[50px] pointer-events-none">
             <img
-              src={currentFeatured?.image_url || "./NewsImage.png"}
+              src={currentFeatured?.image_url || "./NewsImage.webp"}
               alt={currentFeatured?.title || "Featured"}
               className="object-cover w-full h-full rounded-b-[50px]"
             />

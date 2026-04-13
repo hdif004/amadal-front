@@ -41,7 +41,7 @@ const PostsPage = () => {
         <meta property="og:description" content="Retrouvez les dernières publications et actualités d'Amadal Global Systems sur les réseaux sociaux." />
         <meta property="og:url" content={`${SITE_URL}/posts`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.png`} />
+        <meta property="og:image" content={`${SITE_URL}/AmadalGreen.webp`} />
         <link rel="canonical" href={`${SITE_URL}/posts`} />
       </Helmet>
       <Navbar />
