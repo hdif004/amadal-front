@@ -24,7 +24,9 @@ const mapProduct = (wpProduct) => {
     specs: acf.mesures || null,
     labelMesure: acf.label_mesure || null,
     note: acf.note || null,
-    pdfUrl: acf.fiche_produit || null,
+    pdfUrl: typeof acf.fiche_produit === "object" && acf.fiche_produit?.url
+      ? acf.fiche_produit.url
+      : (typeof acf.fiche_produit === "string" ? acf.fiche_produit : null),
     featured: acf.featured === true || acf.featured === 1 || acf.featured === "1" || acf.featured === "true",
     categories: wpProduct.categorie || [],
     brandName: typeof acf.brand === "string" && isNaN(acf.brand) ? acf.brand : null,
