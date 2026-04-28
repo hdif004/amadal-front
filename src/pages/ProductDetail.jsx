@@ -160,7 +160,7 @@ const ProductDetail = () => {
         <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 w-full">
 
           {/* Image + Galerie */}
-          <div className="w-full lg:w-[45%] flex-shrink-0 flex flex-col gap-3">
+          <div className="w-full lg:w-[35%] flex-shrink-0 flex flex-col gap-3">
 
             {/* Titre / Catégorie / Marque — visible uniquement sur mobile, au-dessus de l'image */}
             <div className="lg:hidden flex flex-col gap-2 px-4 pt-4 pb-2">
