@@ -187,6 +187,9 @@ const ProductDetail = () => {
                 className="w-full aspect-square object-cover transition-opacity duration-300"
                 src={activeImage || product.imageURL}
                 alt={product.name}
+                width="800"
+                height="800"
+                fetchpriority="high"
               />
             </div>
 
