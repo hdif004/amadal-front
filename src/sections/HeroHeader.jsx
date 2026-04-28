@@ -7,10 +7,18 @@ const HeroHeader = () => {
 
   return (
     <div
-      className="relative mt-16 w-full bg-cover bg-center rounded-b-3xl overflow-hidden
+      className="relative mt-16 w-full rounded-b-3xl overflow-hidden
                  min-h-[40vh] lg:min-h-[520px] lg:max-h-[650px]"
-      style={{ backgroundImage: `url(${asset("HeroHeader.webp")})` }}
     >
+      <img
+        src={asset("HeroHeader.webp")}
+        alt=""
+        fetchpriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
       {/* Overlay gradient : sombre à gauche, s'éclaircit à droite */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10" />
 

@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, Suspense, lazy } from 'react';
 import Navbar from '../sections/Navbar';
 import HeroHeader from '../sections/HeroHeader';
 import BestProducts from '../sections/BestProducts';
-import News from '../sections/News';
-import BrandsLoop from '../sections/BrandsLoop';
-import LatestPosts from '../sections/LatestPosts';
-import VideoPlayer from '../sections/VideoPlayer';
-import ContactMap from '../sections/ContactMap';
+const News = lazy(() => import('../sections/News'));
+const BrandsLoop = lazy(() => import('../sections/BrandsLoop'));
+const LatestPosts = lazy(() => import('../sections/LatestPosts'));
+const VideoPlayer = lazy(() => import('../sections/VideoPlayer'));
+const ContactMap = lazy(() => import('../sections/ContactMap'));
 import Footer from '../sections/Footer';
 import '../index.css';
 import NavFilters from '../sections/NavFilters';
@@ -81,25 +81,27 @@ const Home = () => {
         <BestProducts />
       </div>
 
-      <div ref={section3Ref} className="mt-12 lg:mt-16">
-        <News />
-      </div>
+      <Suspense fallback={null}>
+        <div ref={section3Ref} className="mt-12 lg:mt-16">
+          <News />
+        </div>
 
-      <div ref={section4Ref} className="mt-12 lg:mt-16">
-        <BrandsLoop />
-      </div>
+        <div ref={section4Ref} className="mt-12 lg:mt-16">
+          <BrandsLoop />
+        </div>
 
-      <div ref={section5Ref} className="mt-12 lg:mt-16">
-        <LatestPosts />
-      </div>
+        <div ref={section5Ref} className="mt-12 lg:mt-16">
+          <LatestPosts />
+        </div>
 
-      <div className="mt-12 lg:mt-16">
-        <VideoPlayer />
-      </div>
+        <div className="mt-12 lg:mt-16">
+          <VideoPlayer />
+        </div>
 
-      <div ref={section6Ref} className="mt-12 lg:mt-16">
-        <ContactMap />
-      </div>
+        <div ref={section6Ref} className="mt-12 lg:mt-16">
+          <ContactMap />
+        </div>
+      </Suspense>
 
       <Footer
         section1Ref={section1Ref}
