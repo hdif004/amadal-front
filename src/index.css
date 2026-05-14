@@ -44,6 +44,41 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+/* Mise à l'échelle de la police pour les grands écrans */
+@media (min-width: 1920px) {
+    html {
+        font-size: 18px; /* +12.5% par rapport au 16px par défaut */
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 22px; /* +37.5% — écrans 2K */
+    }
+    .navbar-inner {
+        height: 90px;
+    }
+    .navbar-container {
+        max-width: 1700px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (min-width: 3840px) {
+    html {
+        font-size: 28px; /* +75% — écrans 4K natifs */
+    }
+    .navbar-inner {
+        height: 110px;
+    }
+    .navbar-container {
+        max-width: 2200px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
 /* Scrollbar personnalisée sur desktop */
 @media (min-width: 1024px) {
     html, body {

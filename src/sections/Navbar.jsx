@@ -153,8 +153,8 @@ const Navbar = () => {
     <>
       <nav className={`fixed top-0 inset-x-0 z-[9999] bg-white transition-shadow duration-300
                        ${scrolled ? "shadow-md" : "shadow-sm"}`}>
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16">
-          <div className="flex items-center justify-between h-16 lg:h-[70px]">
+        <div className="navbar-container max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16">
+          <div className="navbar-inner flex items-center justify-between h-16 lg:h-[70px]">
 
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
