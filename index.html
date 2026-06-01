@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,13 +20,25 @@
     <meta property="og:description" content="Amadal Global Systems, spécialiste en solutions d'irrigation, équipements agricoles et systèmes hydrauliques au Maroc.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://amadal.ma">
-    <meta property="og:image" content="https://amadal.ma/AmadalGreen.png">
+    <meta property="og:image" content="https://amadal.ma/AmadalGreen.webp">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Amadal Global Systems | Solutions d'irrigation">
     <meta name="twitter:description" content="Amadal Global Systems, spécialiste en solutions d'irrigation, équipements agricoles et systèmes hydrauliques au Maroc.">
-    <meta name="twitter:image" content="https://amadal.ma/AmadalGreen.png">
+    <meta name="twitter:image" content="https://amadal.ma/AmadalGreen.webp">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD5SJCEC13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // send_page_view: false → les page_view sont envoyés manuellement
+      // à chaque changement de route (SPA) via le hook useGoogleAnalytics.
+      gtag('config', 'G-XD5SJCEC13', { send_page_view: false });
+    </script>
+
     <script>
       // GitHub Pages SPA redirect handler
       (function(l) {

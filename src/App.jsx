@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import './i18n';
 import { LanguageProvider } from './contexts/LanguageContext';
+import useGoogleAnalytics from './hooks/useGoogleAnalytics';
 
 const Home          = lazy(() => import("./pages/Home"));
 const About         = lazy(() => import("./pages/About"));
@@ -17,6 +18,8 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 function App() {
   const location = useLocation();
+
+  useGoogleAnalytics();
 
   useEffect(() => {
     window.scrollTo(0, 0);

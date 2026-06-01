@@ -33,13 +33,13 @@ const slugify = (text) => {
 };
 
 async function fetchAllProducts() {
-  const res = await fetch(`${WP_BASE}/produit?per_page=100&_fields=id,slug,title`);
+  const res = await fetch(`${WP_BASE}/produit?per_page=100&_fields=id,slug,title,modified`);
   if (!res.ok) throw new Error(`Erreur fetch produits: ${res.status}`);
   return res.json();
 }
 
 async function fetchAllPosts() {
-  const res = await fetch(`${WP_BASE}/posts?per_page=100&_fields=id,slug,title`);
+  const res = await fetch(`${WP_BASE}/posts?per_page=100&_fields=id,slug,title,modified`);
   if (!res.ok) throw new Error(`Erreur fetch articles: ${res.status}`);
   return res.json();
 }
@@ -47,6 +47,10 @@ async function fetchAllPosts() {
 async function generateSitemap() {
   try {
     const [products, posts] = await Promise.all([fetchAllProducts(), fetchAllPosts()]);
+
+    const today = new Date().toISOString().split('T')[0];
+    const lastmodOf = (item) =>
+      item.modified ? item.modified.split('T')[0] : today;
 
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n';
@@ -64,6 +68,7 @@ async function generateSitemap() {
     staticPages.forEach(page => {
       xml += `  <url>\n`;
       xml += `    <loc>${SITE_URL}/${page.url}</loc>\n`;
+      xml += `    <lastmod>${today}</lastmod>\n`;
       xml += `    <priority>${page.priority}</priority>\n`;
       xml += `  </url>\n`;
     });
@@ -73,6 +78,7 @@ async function generateSitemap() {
       const slug = product.slug || slugify(product.title?.rendered || String(product.id));
       xml += `  <url>\n`;
       xml += `    <loc>${SITE_URL}/products/${slug}/${product.id}</loc>\n`;
+      xml += `    <lastmod>${lastmodOf(product)}</lastmod>\n`;
       xml += `    <priority>0.8</priority>\n`;
       xml += `  </url>\n`;
     });
@@ -82,6 +88,7 @@ async function generateSitemap() {
       const slug = post.slug || slugify(post.title?.rendered || String(post.id));
       xml += `  <url>\n`;
       xml += `    <loc>${SITE_URL}/blog/${slug}/${post.id}</loc>\n`;
+      xml += `    <lastmod>${lastmodOf(post)}</lastmod>\n`;
       xml += `    <priority>0.7</priority>\n`;
       xml += `  </url>\n`;
     });

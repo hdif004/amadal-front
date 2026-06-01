@@ -70,6 +70,20 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_URL}/AmadalGreen.webp`} />
         <link rel="canonical" href={SITE_URL} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Amadal Global Systems",
+            "url": SITE_URL,
+            "logo": `${SITE_URL}/AmadalGreen.webp`,
+            "description": "Amadal Global Systems, spécialiste en solutions d'irrigation, équipements agricoles et systèmes hydrauliques au Maroc.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "MA"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
 
