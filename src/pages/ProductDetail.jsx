@@ -9,7 +9,7 @@ import Footer from "../sections/Footer";
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Helmet } from 'react-helmet-async';
 import { SITE_URL } from '../config';
-import { slugify } from '../utils/urlHelpers';
+import { generateProductUrl, slugify } from '../utils/urlHelpers';
 
 
 const ProductDetail = () => {
@@ -78,7 +78,7 @@ const ProductDetail = () => {
     return brand ? brand.name : "N/A";
   };
 
-  const productSlug = product ? slugify(product.name) : '';
+  const productSlug = product ? slugify(product.name_en || product.name) : '';
 
   const productSchema = {
     "@context": "https://schema.org/",
@@ -115,8 +115,6 @@ const ProductDetail = () => {
         <meta name="twitter:image" content={product.imageURL} />
 
         <link rel="canonical" href={`${SITE_URL}/products/${productSlug}/${product.id}`} />
-        <link rel="alternate" hrefLang="fr" href={`${SITE_URL}/fr/products/${product.slug}/${product.id}`} />
-        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/products/${product.slug}/${product.id}`} />
         <script type="application/ld+json">
           {JSON.stringify(productSchema)}
         </script>

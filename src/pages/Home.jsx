@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, Suspense, lazy } from 'react';
 import Navbar from '../sections/Navbar';
 import HeroHeader from '../sections/HeroHeader';
-import BestProducts from '../sections/BestProducts';
+const BestProducts = lazy(() => import('../sections/BestProducts'));
 const News = lazy(() => import('../sections/News'));
 const BrandsLoop = lazy(() => import('../sections/BrandsLoop'));
 const LatestPosts = lazy(() => import('../sections/LatestPosts'));
@@ -91,11 +91,11 @@ const Home = () => {
         <HeroHeader />
       </div>
 
-      <div ref={section2Ref} className="mt-4">
-        <BestProducts />
-      </div>
-
       <Suspense fallback={null}>
+        <div ref={section2Ref} className="mt-4">
+          <BestProducts />
+        </div>
+
         <div ref={section3Ref} className="mt-12 lg:mt-16">
           <News />
         </div>

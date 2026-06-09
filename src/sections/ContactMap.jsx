@@ -65,9 +65,9 @@ const ContactMap = () => {
                   </svg>
                 }
               >
-                <a href="mailto:amadal.distribution@gmail.com"
+                <a href="mailto:contact@amadal.ma"
                   className="text-primary hover:underline break-all">
-                  amadal.distribution@gmail.com
+                  contact@amadal.ma
                 </a>
               </ContactItem>
 
@@ -96,7 +96,7 @@ const ContactMap = () => {
 
             {/* Bouton CTA */}
             <a
-              href="https://mail.google.com/mail/u/0/?fs=1&to=amadal.distribution@gmail.com&su&body&tf=cm"
+              href="https://mail.google.com/mail/u/0/?fs=1&to=contact@amadal.ma&su&body&tf=cm"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-6 py-4

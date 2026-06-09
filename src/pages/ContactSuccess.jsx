@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../sections/Navbar";
-import Footer from "../sections/Footer";
-import Lottie from "lottie-react";
 import { asset } from "../config";
-import animationData from "../lotties/check-mark-primary.json";
 
 const ContactPage = () => {
   return (

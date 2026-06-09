@@ -3,306 +3,382 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://amadal.ma/</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://amadal.ma/about</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/contact</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/blog</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/filtre-azud-helix-system/1428</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/filtre-azud-agl/1424</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/filtre-azud-modular-100/1420</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/raccords-a-compression-astore/1412</loc>
+    <lastmod>2026-04-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vannes-a-bille-airaga-pour-compteurs/1410</loc>
+    <lastmod>2026-04-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/mini-vanne-ff-airaga-serie-mignon/1409</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/mini-vanne-mf-airaga-serie-mignon/1404</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/clapet-a-ressort-airaga-48-a/1401</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-bille-airaga-serie-compact/1398</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-bille-airaga-dream/1394</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/electovanne-hunter-pgv-11-2-et-2/1390</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/programmateur-hunter-btt/1382</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/programmateur-hunter-x2-avec-wand/1376</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/programmateur-hunter-x-core/1371</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/programmateur-hunter-eco-logic/1342</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tuyere-hunter-pro-spray/1360</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tuyere-hunter-ps-ultra/1354</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/arroseur-hunter-i90/1349</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/arroseur-hunter-i20/1343</loc>
+    <lastmod>2026-04-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/arroseur-hunter-pgp/1336</loc>
+    <lastmod>2026-04-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/arroseur-hunter-srm/1329</loc>
+    <lastmod>2026-04-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/arroseur-hunter-pgj/1325</loc>
+    <lastmod>2026-04-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tuyere-k-rain-pro-s/1315</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tuyere-k-rain-np-sprays/1311</loc>
+    <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/programmateur-k-rain-pro-lc/1307</loc>
+    <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/arroseur-k-rain-rps-75/1301</loc>
+    <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/arroseur-k-rain-prosport/1294</loc>
+    <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/arroseur-k-rain-minipro/1288</loc>
+    <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/electrovanne-k-rain-proseries-200/1285</loc>
+    <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/electrovanne-k-rain-proseries-150/1282</loc>
+    <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/electrovanne-k-rain-proseries-100/1276</loc>
+    <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/electovanne-pgv-1/1271</loc>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-boisseau-spherique-dream/1265</loc>
+    <lastmod>2026-04-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/collier-de-fixation-pp/1262</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/colles-tubes-raccords-pvc-u/1259</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/joint-pour-bride-epdm/1257</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tubes-pvc-pression/1254</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-papillon-pvc-u-a-actionneur-electrique/1249</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-bille-pvc-u-a-actionneur-electrique/1246</loc>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/clapet-a-boule-pvc-u-double-raccord/1245</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-papillon-pvc-u-proflow/1239</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-guillotine-pvc-u/1236</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/clapet-pvc-u-a-ressort-double-raccord/1233</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-bille-pvc-u-double-raccord/1230</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/embout-pvc-u-canele-male/1227</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/embout-pvc-u-canele-a-coller/1224</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/traverse-de-parois-pvc-u/1221</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/mamelon-pvc-u/1218</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/embout-pvc-u-mal/1215</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/bride-pvc-u/1212</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/raccord-union-pvc-u-mixte/1209</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/raccord-union-pvc-u-a-coller/1206</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/reduction-pvc-u-male-femelle/1203</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/bague-pvc-u-femelle/1200</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/reduction-pvc-u-a-coller/1197</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/collet-porte-bride/1194</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tes-pvc-u-45-culotte/1191</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tes-pvc-u-mixte-femelle/1188</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tes-pvc-u-a-coller/1185</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/bouchon-pvc-u-taraude-femelle/1182</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/bouchon-pvc-u-a-coller/1179</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/coude-pvc-u-grand-rayon-courbe/1176</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/tes-croix-pvc-u-a-coller/1173</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/manchon-pvc-u-mixte/1170</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/manchon-pvc-u-a-coller/1167</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/coude-pvc-u-90-mixte-femelle/1164</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/coude-pvc-u-45/1157</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products/coude-pvc-u-90/1155</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/blog/amadal-annonce-un-nouveau-partenariat-strategique-avec-k-rain-manufacturing/1138</loc>
+    <lastmod>2026-04-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://amadal.ma/blog/le-traitement-des-eaux-un-processus-essentiel/1120</loc>
+    <lastmod>2026-04-11</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://amadal.ma/blog/smart-irrigation-technology-covers-more-crop-per-drop/1117</loc>
+    <lastmod>2026-04-11</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>

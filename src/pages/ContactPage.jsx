@@ -89,9 +89,9 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-primary/60 mb-1">{t("contact.emailUs")}</p>
-                    <a href="mailto:amadal.distribution@gmail.com"
+                    <a href="mailto:contact@amadal.ma"
                       className="text-sm text-gray-700 hover:text-primary transition-colors break-all">
-                      amadal.distribution@gmail.com
+                      contact@amadal.ma
                     </a>
                   </div>
                 </div>

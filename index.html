@@ -28,8 +28,16 @@
     <meta name="twitter:description" content="Amadal Global Systems, spécialiste en solutions d'irrigation, équipements agricoles et systèmes hydrauliques au Maroc.">
     <meta name="twitter:image" content="https://amadal.ma/AmadalGreen.webp">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD5SJCEC13"></script>
+    <!-- Partytown : décharge GA du thread principal vers un web worker -->
+    <script>
+      partytown = {
+        forward: ['dataLayer.push', 'gtag'],
+      };
+    </script>
+    <script src="/~partytown/partytown.js"></script>
+
+    <!-- Google tag (gtag.js) — exécuté dans le web worker via Partytown -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-XD5SJCEC13"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
