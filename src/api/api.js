@@ -8,6 +8,30 @@ const decodeHtml = (str) => {
   return txt.value;
 };
 
+// ─── Cache ──────────────────────────────────────────────────────────────────
+const PRODUCTS_KEY = "amadal_v1_products";
+const CATEGORIES_KEY = "amadal_v1_categories";
+const PRODUCTS_TTL = 10 * 60 * 1000;  // 10 min
+const CATEGORIES_TTL = 30 * 60 * 1000; // 30 min
+
+let _memProducts = null;
+let _memCategories = null;
+
+const ssGet = (key) => {
+  try {
+    const raw = sessionStorage.getItem(key);
+    if (!raw) return null;
+    const { data, ts } = JSON.parse(raw);
+    const ttl = key === PRODUCTS_KEY ? PRODUCTS_TTL : CATEGORIES_TTL;
+    if (Date.now() - ts > ttl) { sessionStorage.removeItem(key); return null; }
+    return data;
+  } catch { return null; }
+};
+
+const ssSet = (key, data) => {
+  try { sessionStorage.setItem(key, JSON.stringify({ data, ts: Date.now() })); } catch {}
+};
+
 // Mappe un produit WP vers le format attendu par le front
 const mapProduct = (wpProduct) => {
   const acf = wpProduct.acf || {};
@@ -37,10 +61,19 @@ const mapProduct = (wpProduct) => {
 };
 
 export const fetchProducts = async (language = "fr") => {
-  const res = await fetch(`${WP_BASE}/produit?per_page=100&_embed`);
+  if (_memProducts) return _memProducts;
+  const cached = ssGet(PRODUCTS_KEY);
+  if (cached) { _memProducts = cached; return cached; }
+
+  const res = await fetch(
+    `${WP_BASE}/produit?per_page=100&_fields=id,slug,title,excerpt,acf,categorie`
+  );
   if (!res.ok) throw new Error("Erreur fetchProducts");
   const data = await res.json();
-  return data.map(mapProduct);
+  const products = data.map(mapProduct);
+  _memProducts = products;
+  ssSet(PRODUCTS_KEY, products);
+  return products;
 };
 
 export const fetchProductById = async (id, language = "fr") => {
@@ -51,14 +84,21 @@ export const fetchProductById = async (id, language = "fr") => {
 };
 
 export const fetchCategories = async () => {
+  if (_memCategories) return _memCategories;
+  const cached = ssGet(CATEGORIES_KEY);
+  if (cached) { _memCategories = cached; return cached; }
+
   const res = await fetch(`${WP_BASE}/categorie?per_page=100&_fields=id,name,slug,parent`);
   if (!res.ok) throw new Error("Erreur fetchCategories");
   const data = await res.json();
-  return data.map((cat) => ({
+  const categories = data.map((cat) => ({
     idcategory: cat.id,
     name: decodeHtml(cat.name),
     parent: cat.parent || 0,
   }));
+  _memCategories = categories;
+  ssSet(CATEGORIES_KEY, categories);
+  return categories;
 };
 
 export const fetchBrands = async () => {

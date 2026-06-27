@@ -3,27 +3,82 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://amadal.ma/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://amadal.ma/about</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/products</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/contact</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amadal.ma/blog</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/tuyau-darrosage-mtp-tenatex-agri/1466</loc>
+    <lastmod>2026-06-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/programmateur-darrosage-vyr-6050/1462</loc>
+    <lastmod>2026-06-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/reducteur-de-pression-europress/1459</loc>
+    <lastmod>2026-06-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/pressostat-italtecnica-pm/1454</loc>
+    <lastmod>2026-06-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/pressostat-danfoss-kp/1450</loc>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/raccord-egale-a-bride-pour-pehd/1448</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/raccord-male-a-bride-pour-pehd/1446</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/raccord-femelle-a-bride-pour-pehd/1443</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/clapet-laiton-a-battant/1440</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/clapet-avec-crepine-york/1437</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amadal.ma/products/collier-de-prise-en-charge/1433</loc>
+    <lastmod>2026-06-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -188,7 +243,7 @@
   </url>
   <url>
     <loc>https://amadal.ma/products/vanne-a-boisseau-spherique-dream/1265</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
